@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     siteName: "Daeng Mamanggung Linktree",
     images: [
       {
-        url: "/team-avatar.png",
-        width: 400,
-        height: 400,
-        alt: "Tim KKN Daeng Mamanggung",
+        url: "/bg.webp",
+        width: 1280,
+        height: 720,
+        alt: "KKN Daeng Mamanggung",
       },
     ],
     locale: "id_ID",

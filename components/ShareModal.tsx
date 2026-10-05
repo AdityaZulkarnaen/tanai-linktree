@@ -76,13 +76,15 @@ export function ShareModal({
 
         {/* Profile / Target info */}
         <div className="mt-4 flex items-center gap-3 p-3 bg-white/5 rounded-2xl border border-white/5">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden border border-emerald-500/40 bg-zinc-800 flex-shrink-0">
-            <Image
-              src={kknData.avatarUrl}
-              alt={kknData.name}
-              fill
-              className="object-cover"
-            />
+          <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20 bg-white/15 backdrop-blur-sm flex-shrink-0 flex items-center justify-center">
+            {kknData.avatarUrl ? (
+              <Image
+                src={kknData.avatarUrl}
+                alt={kknData.name}
+                fill
+                className="object-cover"
+              />
+            ) : null}
           </div>
           <div className="flex-1 min-w-0">
             <p className="font-semibold text-white truncate text-sm">

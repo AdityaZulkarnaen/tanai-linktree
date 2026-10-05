@@ -39,11 +39,19 @@ export function LinktreeClient() {
   };
 
   return (
-    <main className="min-h-screen w-full bg-[#2596be] flex justify-center items-start sm:py-6 md:py-10 px-0 sm:px-4 relative selection:bg-emerald-600 selection:text-white">
-      {/* Background radial glow */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[600px] bg-emerald-950/20 rounded-full blur-[140px]" />
-        <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-slate-800/30 rounded-full blur-[120px]" />
+    <main className="min-h-screen w-full flex justify-center items-start sm:py-6 md:py-10 px-0 sm:px-4 relative selection:bg-[#4c80ba] selection:text-white">
+      {/* Background Image bg.webp */}
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <Image
+          src="/bg.webp"
+          alt="Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Subtle dark backdrop overlay to ensure crisp contrast with custom color palette */}
+        <div className="absolute inset-0 bg-black/25 backdrop-blur-[1px]" />
       </div>
 
       {/* Main Container Mockup (mimics Linktree desktop & mobile container) */}
@@ -57,7 +65,6 @@ export function LinktreeClient() {
           
           {/* Top Bar (Actions) */}
           <div className="w-full flex items-center justify-end mb-4">
-            {/* Team / Info Badge */}
             {/* Share Profile Button */}
             <button
               onClick={handleOpenShare}
@@ -71,9 +78,9 @@ export function LinktreeClient() {
 
           {/* Profile Header */}
           <div className="flex flex-col items-center text-center mt-1 mb-6">
-            {/* Avatar */}
-            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shadow-xl group">
-              <div className="relative w-full h-full rounded-full overflow-hidden bg-zinc-800">
+            {/* Avatar / Circle Placeholder */}
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/30 bg-white/15 backdrop-blur-md shadow-xl overflow-hidden flex items-center justify-center group">
+              {kknData.avatarUrl ? (
                 <Image
                   src={kknData.avatarUrl}
                   alt={kknData.name}
@@ -82,11 +89,11 @@ export function LinktreeClient() {
                   priority
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-              </div>
+              ) : null}
             </div>
 
-            {/* Title (matching screenshot's forest green title tone) */}
-            <h1 className="mt-3.5 text-2xl sm:text-[26px] font-extrabold text-[#ffffff]">
+            {/* Title */}
+            <h1 className="mt-3.5 text-2xl sm:text-[26px] font-extrabold text-[#ffffff] drop-shadow-md">
               {kknData.name}
             </h1>
 

@@ -37,7 +37,7 @@ export const kknData: KKNConfig = {
   handle: "daengmamanggung",
   tagline: "Berpayung Rahmat Tuhan, selamat datang di tanah pelaut berdoa",
   location: "KKN Tanai Tanadoang 2027",
-  avatarUrl: "/team-avatar.png",
+  avatarUrl: "",
   socials: {
     instagram: "https://instagram.com",
     whatsapp: "https://wa.me/6281234567890?text=Halo%20Tim%20KKN%20Daeng%20Mamanggung",
@@ -49,7 +49,7 @@ export const kknData: KKNConfig = {
   links: [
     {
       id: "cv-tim",
-      title: "CV ANGGOTA TIM DAENG MAMANGGUNG - KAREBA KUMBA 2026 - Google Drive",
+      title: "CV ANGGOTA TIM DAENG MAMANGGUNG - TANAI TANADOANG 2027 - Google Drive",
       url: "https://drive.google.com",
       category: "Dokumen Tim",
       icon: "drive",
@@ -57,28 +57,28 @@ export const kknData: KKNConfig = {
     },
     {
       id: "analisis-masalah",
-      title: "ANALISIS MASALAH KAREBA KUMBA 2026",
+      title: "ANALISIS MASALAH TANAI TANADOANG 2027",
       url: "https://docs.google.com",
       category: "Riset Lapangan",
       icon: "file-text",
     },
     {
       id: "program-kerja",
-      title: "PROGRAM KERJA KAREBA KUMBA 2026",
+      title: "PROGRAM KERJA TANAI TANADOANG 2027",
       url: "https://docs.google.com",
       category: "Program Kerja",
       icon: "briefcase",
     },
     {
       id: "timeline-proker",
-      title: "TIMELINE PROKER KAREBA KUMBA 2026",
+      title: "TIMELINE PROKER TANAI TANADOANG 2027",
       url: "https://docs.google.com",
       category: "Jadwal & Timeline",
       icon: "calendar",
     },
     {
       id: "rab-anggaran",
-      title: "RAB & RENCANA ANGGARAN BIAYA KAREBA KUMBA 2026",
+      title: "RAB & RENCANA ANGGARAN BIAYA TANAI TANADOANG 2027",
       url: "https://docs.google.com",
       category: "Keuangan",
       icon: "calculator",
@@ -92,7 +92,7 @@ export const kknData: KKNConfig = {
     },
     {
       id: "proposal-kkn",
-      title: "PROPOSAL KEGIATAN KKN KAREBA KUMBA 2026 (PDF)",
+      title: "PROPOSAL KEGIATAN KKN TANAI TANADOANG 2027 (PDF)",
       url: "https://drive.google.com",
       category: "Proposal",
       icon: "file",
