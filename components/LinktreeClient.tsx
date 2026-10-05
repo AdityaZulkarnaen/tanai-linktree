@@ -39,7 +39,7 @@ export function LinktreeClient() {
   };
 
   return (
-    <main className="min-h-screen w-full bg-[#181c1f] flex justify-center items-start sm:py-6 md:py-10 px-0 sm:px-4 relative selection:bg-emerald-600 selection:text-white">
+    <main className="min-h-screen w-full bg-[#2596be] flex justify-center items-start sm:py-6 md:py-10 px-0 sm:px-4 relative selection:bg-emerald-600 selection:text-white">
       {/* Background radial glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[600px] bg-emerald-950/20 rounded-full blur-[140px]" />
@@ -47,7 +47,7 @@ export function LinktreeClient() {
       </div>
 
       {/* Main Container Mockup (mimics Linktree desktop & mobile container) */}
-      <div className="relative w-full max-w-[580px] min-h-screen sm:min-h-[92vh] flex flex-col justify-between bg-gradient-to-b from-[#7e8c92] via-[#333a3f] to-[#1c2125] sm:rounded-[36px] sm:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] border border-white/10 overflow-hidden px-4 sm:px-7 py-6 sm:py-8 backdrop-blur-xl">
+      <div className="relative w-full max-w-[580px] min-h-screen sm:min-h-[92vh] flex flex-col justify-between bg-transparent backdrop-blur-4xl sm:rounded-[36px] sm:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden px-4 sm:px-7 py-6 sm:py-8 backdrop-blur-xl">
         
         {/* Subtle top ambient glow */}
         <div className="absolute top-0 inset-x-0 h-44 bg-gradient-to-b from-white/20 via-white/5 to-transparent pointer-events-none" />
@@ -56,21 +56,12 @@ export function LinktreeClient() {
         <div className="relative z-10 flex flex-col items-center w-full">
           
           {/* Top Bar (Actions) */}
-          <div className="w-full flex items-center justify-between mb-4">
+          <div className="w-full flex items-center justify-end mb-4">
             {/* Team / Info Badge */}
-            <button
-              onClick={() => setIsTeamModalOpen(true)}
-              className="w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/90 hover:text-white transition-all shadow-md active:scale-95 group"
-              title="Lihat Tim KKN"
-              aria-label="Lihat Tim KKN"
-            >
-              <Sparkles className="w-4 h-4 text-emerald-300 group-hover:rotate-12 transition-transform" />
-            </button>
-
             {/* Share Profile Button */}
             <button
               onClick={handleOpenShare}
-              className="w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/90 hover:text-white transition-all shadow-md active:scale-95"
+              className="w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md cursor-pointer flex items-center justify-center text-white/90 hover:text-white transition-all shadow-md active:scale-95"
               title="Bagikan Halaman"
               aria-label="Bagikan Halaman"
             >
@@ -81,7 +72,7 @@ export function LinktreeClient() {
           {/* Profile Header */}
           <div className="flex flex-col items-center text-center mt-1 mb-6">
             {/* Avatar */}
-            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-emerald-600 via-emerald-400 to-white/40 shadow-xl group">
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shadow-xl group">
               <div className="relative w-full h-full rounded-full overflow-hidden bg-zinc-800">
                 <Image
                   src={kknData.avatarUrl}
@@ -95,17 +86,17 @@ export function LinktreeClient() {
             </div>
 
             {/* Title (matching screenshot's forest green title tone) */}
-            <h1 className="mt-3.5 text-2xl sm:text-[26px] font-extrabold tracking-tight text-[#1c3822] drop-shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
+            <h1 className="mt-3.5 text-2xl sm:text-[26px] font-extrabold text-[#ffffff]">
               {kknData.name}
             </h1>
 
             {/* Location Tag */}
-            <div className="mt-1 flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-black/20 border border-white/10 text-[11px] font-semibold tracking-wide text-emerald-200">
+            <div className="mt-1 flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white text-[11px] font-semibold tracking-wide text-[#4c80ba]">
               <span>{kknData.location}</span>
             </div>
 
             {/* Tagline / Motto */}
-            <p className="mt-2.5 text-[13px] sm:text-[14px] text-white/95 max-w-[340px] leading-relaxed font-medium drop-shadow-sm px-2">
+            <p className="mt-1 text-[15px] sm:text-[18px] text-white/95 max-w-[340px] leading-relaxed font-medium drop-shadow-sm px-2">
               {kknData.tagline}
             </p>
 
@@ -155,7 +146,7 @@ export function LinktreeClient() {
               )}
               <button
                 onClick={() => setIsTeamModalOpen(true)}
-                className="w-9 h-9 rounded-full bg-emerald-700/40 hover:bg-emerald-600/60 border border-emerald-500/40 flex items-center justify-center text-emerald-200 hover:text-white transition-all hover:scale-110 active:scale-95"
+                className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-[#ffffff] transition-all hover:scale-110 active:scale-95"
                 title="Daftar Anggota Tim"
               >
                 <Users className="w-4 h-4" />
@@ -175,7 +166,7 @@ export function LinktreeClient() {
           </div>
 
           {/* Team Quick Preview Banner */}
-          <div className="w-full mt-5">
+          {/* <div className="w-full mt-5">
             <button
               onClick={() => setIsTeamModalOpen(true)}
               className="w-full py-3 px-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-between transition-all group text-left"
@@ -195,7 +186,7 @@ export function LinktreeClient() {
               </div>
               <ChevronRight className="w-4 h-4 text-white/40 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Floating Pill & Footer */}

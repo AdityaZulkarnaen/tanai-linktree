@@ -35,8 +35,8 @@ export interface KKNConfig {
 export const kknData: KKNConfig = {
   name: "Daeng Mamanggung",
   handle: "daengmamanggung",
-  tagline: "Berlayar dengan Reso, Menapak dengan Siri', Mengabdi dengan Hati",
-  location: "KKN Kareba Kumba 2026",
+  tagline: "Berpayung Rahmat Tuhan, selamat datang di tanah pelaut berdoa",
+  location: "KKN Tanai Tanadoang 2027",
   avatarUrl: "/team-avatar.png",
   socials: {
     instagram: "https://instagram.com",

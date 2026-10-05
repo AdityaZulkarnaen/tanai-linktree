@@ -22,8 +22,7 @@ export function BottomPill({ onOpenTeam, onOpenShare }: BottomPillProps) {
           onClick={onOpenShare}
           className="text-xs font-bold tracking-tight hover:text-emerald-700 transition-colors flex items-center gap-1.5"
         >
-          <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-          <span>linktr.ee/{kknData.handle}</span>
+          <span>nanti ini linknya</span>
         </button>
         <button
           type="button"
@@ -40,7 +39,7 @@ export function BottomPill({ onOpenTeam, onOpenShare }: BottomPillProps) {
         <span>•</span>
         <button
           onClick={onOpenTeam}
-          className="text-emerald-300 hover:text-emerald-200 underline font-semibold transition-colors"
+          className="text-white hover:scale-105 transition-all duration-100 cursor-pointer ease-in-out underline font-semibold"
         >
           Lihat Struktur Anggota Tim
         </button>
