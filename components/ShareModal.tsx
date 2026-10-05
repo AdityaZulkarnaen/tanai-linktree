@@ -103,7 +103,7 @@ export function ShareModal({
             <p className="mt-2 text-xs text-zinc-600 font-medium">Pindai dengan kamera ponsel</p>
             <button
               onClick={() => setShowQR(false)}
-              className="mt-3 text-xs text-emerald-700 font-semibold hover:underline"
+              className="mt-3 text-xs text-[#4c80ba] hover:text-[#7099c8] font-semibold hover:underline"
             >
               Kembali ke opsi bagikan
             </button>
@@ -113,9 +113,9 @@ export function ShareModal({
             {/* WhatsApp */}
             <button
               onClick={handleWhatsApp}
-              className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 transition-all font-medium text-sm text-left"
+              className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-[#4c80ba]/20 hover:bg-[#4c80ba]/30 text-[#8cb4e0] border border-[#4c80ba]/30 transition-all font-medium text-sm text-left"
             >
-              <div className="p-2 rounded-lg bg-emerald-600 text-white">
+              <div className="p-2 rounded-lg bg-[#4c80ba] text-white">
                 <WhatsAppIcon className="w-4 h-4" />
               </div>
               <span>Bagikan ke WhatsApp</span>
@@ -135,9 +135,9 @@ export function ShareModal({
             {/* QR Code toggle */}
             <button
               onClick={() => setShowQR(true)}
-              className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border border-purple-500/30 transition-all font-medium text-sm text-left"
+              className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 border border-indigo-500/30 transition-all font-medium text-sm text-left"
             >
-              <div className="p-2 rounded-lg bg-purple-500 text-white">
+              <div className="p-2 rounded-lg bg-indigo-500 text-white">
                 <QrCode className="w-4 h-4" />
               </div>
               <span>Tampilkan Kode QR</span>
@@ -155,7 +155,7 @@ export function ShareModal({
               onClick={handleCopy}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
                 copied
-                  ? "bg-emerald-500 text-black font-bold"
+                  ? "bg-[#4c80ba] text-white font-bold"
                   : "bg-white/15 hover:bg-white/25 text-white"
               }`}
             >

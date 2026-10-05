@@ -22,19 +22,19 @@ export function LinkCard({ link, onOpenActionMenu }: LinkCardProps) {
   const getIcon = () => {
     switch (link.icon) {
       case "drive":
-        return <FolderOpen className="w-5 h-5 text-emerald-300" />;
+        return <FolderOpen className="w-5 h-5 text-sky-200" />;
       case "file-text":
-        return <FileText className="w-5 h-5 text-emerald-300" />;
+        return <FileText className="w-5 h-5 text-sky-200" />;
       case "calendar":
-        return <Calendar className="w-5 h-5 text-emerald-300" />;
+        return <Calendar className="w-5 h-5 text-sky-200" />;
       case "calculator":
-        return <Calculator className="w-5 h-5 text-emerald-300" />;
+        return <Calculator className="w-5 h-5 text-sky-200" />;
       case "handshake":
-        return <Handshake className="w-5 h-5 text-emerald-300" />;
+        return <Handshake className="w-5 h-5 text-sky-200" />;
       case "image":
-        return <ImageIcon className="w-5 h-5 text-emerald-300" />;
+        return <ImageIcon className="w-5 h-5 text-sky-200" />;
       default:
-        return <File className="w-5 h-5 text-emerald-300" />;
+        return <File className="w-5 h-5 text-sky-200" />;
     }
   };
 

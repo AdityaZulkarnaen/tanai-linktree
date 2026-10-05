@@ -22,7 +22,7 @@ export function TeamModal({ isOpen, onClose }: TeamModalProps) {
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-white/10 flex-shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-emerald-600/30 text-emerald-400 border border-emerald-500/30">
+            <div className="p-2 rounded-xl bg-[#4c80ba]/25 text-[#7099c8] border border-[#4c80ba]/40">
               <Users className="w-5 h-5" />
             </div>
             <div>
@@ -47,10 +47,10 @@ export function TeamModal({ isOpen, onClose }: TeamModalProps) {
             >
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <UserCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <UserCheck className="w-4 h-4 text-[#7099c8] flex-shrink-0" />
                   <h4 className="font-semibold text-sm text-white">{member.name}</h4>
                 </div>
-                <p className="text-xs font-medium text-emerald-300 ml-6">
+                <p className="text-xs font-medium text-[#7099c8] ml-6">
                   {member.role}
                 </p>
                 <div className="flex items-center gap-1.5 text-[11px] text-white/50 ml-6">

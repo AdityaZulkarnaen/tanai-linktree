@@ -125,7 +125,7 @@ export function LinktreeClient() {
                   href={kknData.socials.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-black/25 hover:bg-black/45 border border-white/15 flex items-center justify-center text-white/85 hover:text-emerald-400 transition-all hover:scale-110 active:scale-95"
+                  className="w-9 h-9 rounded-full bg-black/25 hover:bg-black/45 border border-white/15 flex items-center justify-center text-white/85 hover:text-sky-300 transition-all hover:scale-110 active:scale-95"
                   title="WhatsApp Tim KKN"
                 >
                   <WhatsAppIcon className="w-4 h-4" />
@@ -179,11 +179,11 @@ export function LinktreeClient() {
               className="w-full py-3 px-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-between transition-all group text-left"
             >
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-emerald-600/30 flex items-center justify-center text-emerald-400 border border-emerald-500/30">
+                <div className="w-8 h-8 rounded-xl bg-[#4c80ba]/30 flex items-center justify-center text-[#7099c8] border border-[#4c80ba]/30">
                   <Users className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-white group-hover:text-emerald-300 transition-colors">
+                  <p className="text-xs font-semibold text-white group-hover:text-[#7099c8] transition-colors">
                     Lihat Struktur Organisasi & Anggota Tim
                   </p>
                   <p className="text-[11px] text-white/50">
