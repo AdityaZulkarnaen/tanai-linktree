@@ -17,6 +17,7 @@ export interface TeamMember {
 export interface KKNConfig {
   name: string;
   handle: string;
+  siteUrl: string;
   tagline: string;
   location: string;
   avatarUrl: string;
@@ -35,6 +36,7 @@ export interface KKNConfig {
 export const kknData: KKNConfig = {
   name: "Daeng Mamanggung",
   handle: "daengmamanggung",
+  siteUrl: "https://daeng-mamanggung-tanai.vercel.app",
   tagline: "Berpayung Rahmat Tuhan, selamat datang di tanah pelaut berdoa",
   location: "KKN Tanai Tanadoang 2027",
   avatarUrl: "",
@@ -48,61 +50,32 @@ export const kknData: KKNConfig = {
   },
   links: [
     {
-      id: "cv-tim",
-      title: "CV ANGGOTA TIM DAENG MAMANGGUNG - TANAI TANADOANG 2027 - Google Drive",
-      url: "https://drive.google.com",
+      id: "analisis-anggota",
+      title: "ANALISIS ANGGOTA",
+      url: "#",
       category: "Dokumen Tim",
-      icon: "drive",
-      isFeatured: true,
-    },
-    {
-      id: "analisis-masalah",
-      title: "ANALISIS MASALAH TANAI TANADOANG 2027",
-      url: "https://docs.google.com",
-      category: "Riset Lapangan",
       icon: "file-text",
     },
     {
-      id: "program-kerja",
-      title: "PROGRAM KERJA TANAI TANADOANG 2027",
-      url: "https://docs.google.com",
-      category: "Program Kerja",
-      icon: "briefcase",
-    },
-    {
-      id: "timeline-proker",
-      title: "TIMELINE PROKER TANAI TANADOANG 2027",
-      url: "https://docs.google.com",
-      category: "Jadwal & Timeline",
-      icon: "calendar",
-    },
-    {
-      id: "rab-anggaran",
-      title: "RAB & RENCANA ANGGARAN BIAYA TANAI TANADOANG 2027",
-      url: "https://docs.google.com",
+      id: "rab",
+      title: "RAB",
+      url: "https://docs.google.com/spreadsheets/d/1AsQ8KxGi23wS8uzT-LFwX9VfNFblUXYOCAWtMIFv52E/edit?usp=sharing",
       category: "Keuangan",
       icon: "calculator",
     },
     {
-      id: "skema-sponsor",
-      title: "SKEMA SPONSOR DAN KEMITRAAN TIM DAENG MAMANGGUNG",
-      url: "https://drive.google.com",
-      category: "Partnership",
-      icon: "handshake",
+      id: "program-kerja",
+      title: "PROGRAM KERJA",
+      url: "https://docs.google.com/spreadsheets/d/1Re7FHb9ukkfovvKnJJ1NpyGfOEh_y10Hgbgv__d-svs/edit?usp=drive_link",
+      category: "Program Kerja",
+      icon: "briefcase",
     },
     {
-      id: "proposal-kkn",
-      title: "PROPOSAL KEGIATAN KKN TANAI TANADOANG 2027 (PDF)",
-      url: "https://drive.google.com",
-      category: "Proposal",
-      icon: "file",
-    },
-    {
-      id: "logbook-kegiatan",
-      title: "DOKUMENTASI KEGIATAN & LOGBOOK LAPANGAN",
-      url: "https://drive.google.com",
-      category: "Dokumentasi",
-      icon: "image",
+      id: "cv-anggota",
+      title: "CV ANGGOTA",
+      url: "https://drive.google.com/drive/folders/1xRqN2N3pKutzFSv7H7QnCxeJCXPZt9wy?usp=sharing",
+      category: "Dokumen Tim",
+      icon: "drive",
     },
   ],
   teamMembers: [

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { X, Copy, Check, Send, QrCode } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import Image from "next/image";
@@ -22,17 +22,9 @@ export function ShareModal({
 }: ShareModalProps) {
   const [copied, setCopied] = useState(false);
   const [showQR, setShowQR] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState("");
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentUrl(window.location.href);
-    }
-  }, []);
-
   if (!isOpen) return null;
 
-  const urlToShare = targetUrl || currentUrl || "https://linktr.ee/daengmamanggung";
+  const urlToShare = targetUrl || kknData.siteUrl;
   const shareTitle = targetTitle || `${kknData.name} - ${kknData.location}`;
   const shareText = `Kunjungi tautan resmi ${shareTitle}:\n${urlToShare}`;
 

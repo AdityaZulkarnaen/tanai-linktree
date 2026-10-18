@@ -2,30 +2,16 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { 
-  Share2, 
-  Sparkles, 
-  Mail, 
-  Users, 
-  ChevronRight
-} from "lucide-react";
-import { 
-  InstagramIcon, 
-  WhatsAppIcon, 
-  TikTokIcon, 
-  YouTubeIcon 
-} from "./SocialIcons";
+import { Share2 } from "lucide-react";
 import { kknData, LinkItem } from "@/data/kknData";
 import { LinkCard } from "./LinkCard";
 import { ShareModal } from "./ShareModal";
-import { TeamModal } from "./TeamModal";
 import { LinkActionModal } from "./LinkActionModal";
 import { DesktopQrCode } from "./DesktopQrCode";
 import { BottomPill } from "./BottomPill";
 
 export function LinktreeClient() {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
-  const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState<LinkItem | null>(null);
   const [shareTargetLink, setShareTargetLink] = useState<LinkItem | null>(null);
 
@@ -107,58 +93,6 @@ export function LinktreeClient() {
               {kknData.tagline}
             </p>
 
-            {/* Social Icons row */}
-            <div className="mt-3.5 flex items-center justify-center gap-2.5 flex-wrap">
-              {kknData.socials.instagram && (
-                <a
-                  href={kknData.socials.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-black/25 hover:bg-black/45 border border-white/15 flex items-center justify-center text-white/85 hover:text-pink-300 transition-all hover:scale-110 active:scale-95"
-                  title="Instagram"
-                >
-                  <InstagramIcon className="w-4 h-4" />
-                </a>
-              )}
-              {kknData.socials.whatsapp && (
-                <a
-                  href={kknData.socials.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-black/25 hover:bg-black/45 border border-white/15 flex items-center justify-center text-white/85 hover:text-sky-300 transition-all hover:scale-110 active:scale-95"
-                  title="WhatsApp Tim KKN"
-                >
-                  <WhatsAppIcon className="w-4 h-4" />
-                </a>
-              )}
-              {kknData.socials.tiktok && (
-                <a
-                  href={kknData.socials.tiktok}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-black/25 hover:bg-black/45 border border-white/15 flex items-center justify-center text-white/85 hover:text-cyan-300 transition-all hover:scale-110 active:scale-95"
-                  title="TikTok"
-                >
-                  <TikTokIcon className="w-4 h-4" />
-                </a>
-              )}
-              {kknData.socials.email && (
-                <a
-                  href={kknData.socials.email}
-                  className="w-9 h-9 rounded-full bg-black/25 hover:bg-black/45 border border-white/15 flex items-center justify-center text-white/85 hover:text-amber-300 transition-all hover:scale-110 active:scale-95"
-                  title="Email"
-                >
-                  <Mail className="w-4 h-4" />
-                </a>
-              )}
-              <button
-                onClick={() => setIsTeamModalOpen(true)}
-                className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-[#ffffff] transition-all hover:scale-110 active:scale-95"
-                title="Daftar Anggota Tim"
-              >
-                <Users className="w-4 h-4" />
-              </button>
-            </div>
           </div>
 
           {/* Links List */}
@@ -197,10 +131,7 @@ export function LinktreeClient() {
         </div>
 
         {/* Bottom Floating Pill & Footer */}
-        <BottomPill 
-          onOpenTeam={() => setIsTeamModalOpen(true)} 
-          onOpenShare={handleOpenShare} 
-        />
+        <BottomPill onOpenShare={handleOpenShare} />
       </div>
 
       {/* Desktop "View on mobile" QR Code (from user screenshot bottom right) */}
@@ -218,12 +149,6 @@ export function LinktreeClient() {
       <LinkActionModal
         link={selectedLink}
         onClose={() => setSelectedLink(null)}
-      />
-
-      {/* Team Roster Modal */}
-      <TeamModal
-        isOpen={isTeamModalOpen}
-        onClose={() => setIsTeamModalOpen(false)}
       />
     </main>
   );

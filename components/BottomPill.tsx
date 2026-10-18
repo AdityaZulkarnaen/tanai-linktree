@@ -1,16 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Sparkles } from "lucide-react";
+import { X } from "lucide-react";
 import { kknData } from "@/data/kknData";
 
 interface BottomPillProps {
-  onOpenTeam: () => void;
   onOpenShare: () => void;
 }
 
-export function BottomPill({ onOpenTeam, onOpenShare }: BottomPillProps) {
+export function BottomPill({ onOpenShare }: BottomPillProps) {
   const [visible, setVisible] = useState(true);
+  const analisisUrl = kknData.links.find((link) => link.id === "analisis-anggota")?.url ?? "#";
 
   if (!visible) return null;
 
@@ -22,7 +22,7 @@ export function BottomPill({ onOpenTeam, onOpenShare }: BottomPillProps) {
           onClick={onOpenShare}
           className="text-xs font-bold tracking-tight hover:text-[#4c80ba] transition-colors flex items-center gap-1.5"
         >
-          <span>nanti ini linknya</span>
+          <span>{kknData.siteUrl.replace(/^https?:\/\//, "")}</span>
         </button>
         <button
           type="button"
@@ -37,12 +37,14 @@ export function BottomPill({ onOpenTeam, onOpenShare }: BottomPillProps) {
       <div className="flex items-center gap-2 text-[12px] text-white/70">
         <span>KKN {kknData.name}</span>
         <span>•</span>
-        <button
-          onClick={onOpenTeam}
+        <a
+          href={analisisUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white hover:scale-105 transition-all duration-100 cursor-pointer ease-in-out underline font-semibold"
         >
-          Lihat Struktur Anggota Tim
-        </button>
+          Lihat Analisis Tim
+        </a>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { kknData } from "@/data/kknData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://linktr.ee"),
+  metadataBase: new URL(kknData.siteUrl),
   title: "Daeng Mamanggung | KKN Kareba Kumba 2026",
   description: "Official Linktree Tim KKN Daeng Mamanggung - Berlayar dengan Reso, Menapak dengan Siri', Mengabdi dengan Hati.",
   openGraph: {
     title: "Daeng Mamanggung | KKN Kareba Kumba 2026",
     description: "Berlayar dengan Reso, Menapak dengan Siri', Mengabdi dengan Hati.",
-    url: "https://linktr.ee/daengmamanggung",
+    url: kknData.siteUrl,
     siteName: "Daeng Mamanggung Linktree",
     images: [
       {
