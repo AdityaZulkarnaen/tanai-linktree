@@ -37,7 +37,7 @@ export const kknData: KKNConfig = {
   name: "Daeng Mamangung",
   handle: "daengmamangung",
   siteUrl: "https://daeng-mamangung-tanai.vercel.app",
-  tagline: "Berpayung Rahmat Tuhan, selamat datang di tanah pelaut berdoa",
+  tagline: "Berpayung Rahmat Tuhan, Selamat Datang di Tanah Pelaut Berdoa",
   location: "KKN Tanai Tanadoang 2027",
   avatarUrl: "",
   socials: {
