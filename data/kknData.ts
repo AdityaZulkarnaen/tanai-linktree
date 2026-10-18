@@ -52,7 +52,7 @@ export const kknData: KKNConfig = {
     {
       id: "analisis-anggota",
       title: "ANALISIS ANGGOTA",
-      url: "#",
+      url: "https://drive.google.com/file/d/1rcbH9nquyj3pJQGZU3j5KustdoiPAjyK/view?usp=sharing",
       category: "Dokumen Tim",
       icon: "file-text",
     },
