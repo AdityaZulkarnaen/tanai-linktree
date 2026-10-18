@@ -34,18 +34,18 @@ export interface KKNConfig {
 }
 
 export const kknData: KKNConfig = {
-  name: "Daeng Mamanggung",
-  handle: "daengmamanggung",
-  siteUrl: "https://daeng-mamanggung-tanai.vercel.app",
+  name: "Daeng Mamangung",
+  handle: "daengmamangung",
+  siteUrl: "https://daeng-mamangung-tanai.vercel.app",
   tagline: "Berpayung Rahmat Tuhan, selamat datang di tanah pelaut berdoa",
   location: "KKN Tanai Tanadoang 2027",
   avatarUrl: "",
   socials: {
     instagram: "https://instagram.com",
-    whatsapp: "https://wa.me/6281234567890?text=Halo%20Tim%20KKN%20Daeng%20Mamanggung",
+    whatsapp: "https://wa.me/6281234567890?text=Halo%20Tim%20KKN%20Daeng%20Mamangung",
     tiktok: "https://tiktok.com",
     youtube: "https://youtube.com",
-    email: "mailto:daengmamanggung.kkn@gmail.com",
+    email: "mailto:daengmamangung.kkn@gmail.com",
     drive: "https://drive.google.com",
   },
   links: [

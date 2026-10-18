@@ -16,19 +16,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(kknData.siteUrl),
-  title: "Daeng Mamanggung | KKN Kareba Kumba 2026",
-  description: "Official Linktree Tim KKN Daeng Mamanggung - Berlayar dengan Reso, Menapak dengan Siri', Mengabdi dengan Hati.",
+  title: "Daeng Mamangung | KKN Kareba Kumba 2026",
+  description: "Official Linktree Tim KKN Daeng Mamangung - Berlayar dengan Reso, Menapak dengan Siri', Mengabdi dengan Hati.",
   openGraph: {
-    title: "Daeng Mamanggung | KKN Kareba Kumba 2026",
+    title: "Daeng Mamangung | KKN Kareba Kumba 2026",
     description: "Berlayar dengan Reso, Menapak dengan Siri', Mengabdi dengan Hati.",
     url: kknData.siteUrl,
-    siteName: "Daeng Mamanggung Linktree",
+    siteName: "Daeng Mamangung Linktree",
     images: [
       {
         url: "/bg.webp",
         width: 1280,
         height: 720,
-        alt: "KKN Daeng Mamanggung",
+        alt: "KKN Daeng Mamangung",
       },
     ],
     locale: "id_ID",

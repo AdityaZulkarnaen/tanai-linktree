@@ -121,7 +121,7 @@ export function LinktreeClient() {
                     Lihat Struktur Organisasi & Anggota Tim
                   </p>
                   <p className="text-[11px] text-white/50">
-                    {kknData.teamMembers.length} Mahasiswa KKN Daeng Mamanggung
+                    {kknData.teamMembers.length} Mahasiswa KKN Daeng Mamangung
                   </p>
                 </div>
               </div>
