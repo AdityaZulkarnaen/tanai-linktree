@@ -77,6 +77,20 @@ export const kknData: KKNConfig = {
       category: "Dokumen Tim",
       icon: "drive",
     },
+    {
+      id: "prototipe-sinar",
+      title: "PROTOTIPE SINAR",
+      url: "/prototipe/Prototye%20SINAR.pdf",
+      category: "Prototipe",
+      icon: "file-text",
+    },
+    {
+      id: "prototipe-insinerator",
+      title: "PROTOTIPE INSINERATOR",
+      url: "/prototipe/PROTOTYPE%20INSINERATOR%20(2).pdf",
+      category: "Prototipe",
+      icon: "file-text",
+    },
   ],
   teamMembers: [
     {

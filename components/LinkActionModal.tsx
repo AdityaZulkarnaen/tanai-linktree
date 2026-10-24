@@ -15,9 +15,20 @@ export function LinkActionModal({ link, onClose }: LinkActionModalProps) {
 
   if (!link) return null;
 
+  const getFullUrl = () => {
+    if (!link) return "";
+    if (link.url.startsWith("http://") || link.url.startsWith("https://")) {
+      return link.url;
+    }
+    if (typeof window !== "undefined") {
+      return `${window.location.origin}${link.url}`;
+    }
+    return link.url;
+  };
+
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(link.url);
+      await navigator.clipboard.writeText(getFullUrl());
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -27,7 +38,7 @@ export function LinkActionModal({ link, onClose }: LinkActionModalProps) {
   };
 
   const handleWhatsApp = () => {
-    const text = `Tautan: ${link.title}\n${link.url}`;
+    const text = `Tautan: ${link.title}\n${getFullUrl()}`;
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, "_blank");
   };
 
